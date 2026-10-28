@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pl">
+    <head>
+        <script src="js/main.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Kontakt
+        </title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <button id="wygladowo" type="button">Zmień na ciemny kolor</button>
+        <nav>
+            <a href="kontakt.html" aria-current="page">Kontakt</a>
+            <a href="index.html">Katalog</a>
+            <a href="produkt.html">Szczegóły produktów</a>
+        </nav>
+        <header>
+            <h1>
+                Napisz do nas
+            </h1>
+        </header>
+        <main class="formularz">
+            <section id="sekcja_podsumowanie">
+                <h2>Podsumowanie zapytania</h2>
+                <p id="wynik-ceny">Wybierz produkt i ilość</p>
+                <p id="wynik-podsumowania"></p>
+            </section>
+            <p>Formularz demonstracyjny. Dane pojawią się na w adresie strony, zapytanie nie zostanie zapisane ani wysłane emailem.</p>
+            <form method="get" action="kontakt.html">
+                <label for="emailKlienta">Wpisz swój email:</label>
+                    <input type="email" id="emailKlienta" name="email" required>
+                <label for="wyborProduktu">Wybierz produkt (wymagane):</label>
+                <select id="wyborProduktu" name="produkt" required>
+                    <option value="">Wybierz produkt</option>
+                    <option value="Uchwyty">Uchwyty do pompek</option>
+                    <option value="Bieżnia">Bieżnia LIGHT</option>
+                    <option value="drazek">Drążek do podciagania</option>
+                    </select>
+                <label for="wyborIlosci">Wprowadź ilość:</label>
+                    <input type="number" id="wyborIlosci" name="ilosc" required min="1" max="5" step="1">
+                <label for="wiadomoscKlienta">Wiadomość (od 10 do 500 znaków:)</label>
+                    <textarea name="wiadomosc" id="wiadomoscKlienta" required minlength="10" maxlength="500"></textarea>
+                <button type="submit">Sprawdz zapytanie</button>
+            </form>
+        
+        </main>
+        <footer>
+
+        </footer>
+
+    </body>
+</html>
